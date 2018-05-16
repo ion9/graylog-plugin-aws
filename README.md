@@ -127,6 +127,8 @@ Next, create a file called _trust_policy.json_ with the following content:
 
 **Make sure to change the _Service_ from _eu-west-1_ to the Region you are running in.**
 
+### Steps 3: Set up IAM role
+
 Now create a a new IAM role with the permissions in the file we just created:
 
     aws iam create-role --role-name CWLtoKinesisRole --assume-role-policy-document file://trust_policy.json
